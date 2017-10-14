@@ -1,6 +1,7 @@
 // Not using async/await on purpose to avoid adding regenerator-runtime
 // to lowdb dependencies
-const fs = require('graceful-fs')
+const electron = window.require('electron');
+const fs = electron.remote.require('fs');
 const pify = require('pify')
 const steno = require('steno')
 const Base = require('./Base')
